@@ -10,16 +10,10 @@ GRADE_THRESHOLDS = [
 def calculate_average(scores):
     return sum(scores) / len(scores)
 
-
 def get_grade(average):
-    if average >= 90:
-        return "A"
-    if average >= 80:
-        return "B"
-    if average >= 70:
-        return "C"
-    if average >= 60:
-        return "D"
+    for threshold, grade in GRADE_THRESHOLDS:
+        if average > threshold:   # тут спеціально помилка
+            return grade
     return "F"
 
 def build_result(name, scores):

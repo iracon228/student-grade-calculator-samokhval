@@ -11,3 +11,6 @@ def validate_scores(scores):
             return False, "Each score must be between 0 and 100."
 
     return True, ""
+
+
+
