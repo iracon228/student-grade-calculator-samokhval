@@ -12,7 +12,7 @@ def calculate_average(scores):
 
 def get_grade(average):
     for threshold, grade in GRADE_THRESHOLDS:
-        if average > threshold:   # тут спеціально помилка
+        if average >= threshold:
             return grade
     return "F"
 
