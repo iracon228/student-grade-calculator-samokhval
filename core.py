@@ -12,11 +12,15 @@ def calculate_average(scores):
 
 
 def get_grade(average):
-    for threshold, grade in GRADE_THRESHOLDS:
-        if average >= threshold:
-            return grade
+    if average >= 90:
+        return "A"
+    if average >= 80:
+        return "B"
+    if average >= 70:
+        return "C"
+    if average >= 60:
+        return "D"
     return "F"
-
 
 def build_result(name, scores):
     average = calculate_average(scores)
@@ -27,4 +31,4 @@ def build_result(name, scores):
         "scores": scores,
         "average": round(average, 2),
         "grade": grade,
-    }
+    
