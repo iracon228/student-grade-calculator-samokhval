@@ -12,5 +12,3 @@ def validate_scores(scores):
 
     return True, ""
 
-
-
