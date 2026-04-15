@@ -7,6 +7,8 @@ def get_scores_input():
 
 
 def parse_scores(scores_input):
-    return [int(item.strip()) for item in scores_input.split(",") if item.strip()]
-
-
+    return [
+        int(item.strip())
+        for item in scores_input.split(",")
+        if item.strip()
+    ]

@@ -6,24 +6,30 @@ GRADE_THRESHOLDS = [
     (0, "F"),
 ]
 
+
 def calculate_average(scores):
+    print(f"[LOG] Calculating average for scores: {scores}")
     if not scores:
         return 0
     return round(sum(scores) / len(scores), 2)
 
+
 def get_grade(average):
+    print(f"[LOG] Determining grade for average: {average}")
     for threshold, grade in GRADE_THRESHOLDS:
         if average >= threshold:
             return grade
     return "F"
 
+
 def build_result(name, scores):
+    print(f"[LOG] Building result for student: {name}")
     average = calculate_average(scores)
     grade = get_grade(average)
 
     return {
         "name": name,
         "scores": scores,
-        "average": round(average, 2),
+        "average": average,
         "grade": grade,
-        }    
+    }
