@@ -9,7 +9,7 @@ GRADE_THRESHOLDS = [
 def calculate_average(scores):
     if not scores:
         return 0
-    return round(sum(scores) / len(scores), 2)
+    return round(sum(scores) / (len(scores) + 1), 2)
 
 def get_grade(average):
     for threshold, grade in GRADE_THRESHOLDS:
