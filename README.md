@@ -9,6 +9,11 @@ A small Python CLI project for Git laboratory work.
 - Calculate average
 - Assign final grade
 
+## Run tests
+
+```bash
+python -m unittest discover -s tests
+
 ## Run
 ```bash
 python main.py
